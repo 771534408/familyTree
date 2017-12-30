@@ -1,0 +1,47 @@
+<ion-view title="搜索联系人页面">
+	<ion-nav-buttons side="right">
+		<button class="button no-animation button-icon icon ion-android-search">
+			搜索
+        </button>
+	</ion-nav-buttons>
+	<ion-content>
+		<div class="list">
+			<label class="item item-input">
+        所在镇或乡：
+        <input type="text"  class="input-select" ng-model="hjSelect_x.result" readonly="readonly" placeholder="请选择所在的乡或者镇" conf="hjSelect_x"  modal-select>
+        <i class="icon-next"></i>
+      </label>
+
+			<label class="item item-input">
+        所在小村庄：
+        <input type="text"  class="input-select" ng-model="hjSelect_c.result"  readonly="readonly" placeholder="请选择所在的村庄" conf="hjSelect_c"  modal-select>
+        <i class="icon-next"></i>
+      </label>
+			<label class="item item-input">
+        所在村下的小队：
+        <input type="text"  class="input-select" ng-model="hjSelect_d.result" readonly="readonly" placeholder="请选择所在的村庄下的小队" conf="hjSelect_d"  modal-select>
+        <i class="icon-next"></i>
+      </label>
+      
+      <label class="item item-input">
+        姓名：
+        <input type="text"  class="input-select" ng-model="name"  placeholder="请输入搜索的姓名">
+        <i class="icon "></i>
+      </label>
+      </div>
+	</ion-content>
+	<div class="bar bar-footer no-padding">
+		<div class="row no-padding">
+			<div class="col no-padding">
+				<button class="button button-full button-light reset" ng-click="reset()">
+          重置
+        </button>
+			</div>
+			<div class="col no-padding">
+				<button class="button button-full button-positive sure" ng-click="submit()">
+          搜索
+        </button>
+			</div>
+		</div>
+	</div>
+</ion-view>

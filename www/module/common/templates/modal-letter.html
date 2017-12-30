@@ -1,0 +1,25 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-positive" align-title="center">
+		<button ng-click="closeModal()" class="button back-button  buttons button-clear header-item"><i class="icon icon-back"></i> <span class="back-text"><span class="default-title">返回</span></span></button>
+		<div class="title title-center header-item">{{conf.title}}</div>
+	</ion-header-bar>
+	<div class="bar bar-subheader item-input-inset" ng-if="::conf.hasSearch">
+		<label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="请输入" ng-model="conf.searchKey" >
+      </label>
+		<button type="button" class="button button-clear modal-search" style="color:#000000 ;" ng-if="conf.searchKey!=''" ng-click="clearSearch()">
+      取消
+      </button>
+	</div>
+	<ion-content class="hj-modal" ng-class="{'has-subheader':conf.hasSearch}">
+		<div class="row letter" ng-repeat="(key,value) in conf.data" ng-show="groupValue.length">
+			<div class="col-10 key"> {{key}}</div>
+			<div class="col-90">
+				<p ng-repeat="xs in value | filter:conf.searchKey as groupValue" ng-click="selectItem(xs)">
+					<span ng-bind-html="xs | wordPlace:conf.searchKey"></span>
+				</p>
+			</div>
+		</div>
+	</ion-content>
+</ion-modal-view>

@@ -1,0 +1,25 @@
+<ion-view title="{{title}}联系人">
+	<ion-nav-buttons side="right">
+		<button class="button no-animation button-icon icon ion-android-search" ui-sref="search">
+			搜索
+        </button>
+	</ion-nav-buttons>
+	<tab-scroll conf="models"></tab-scroll>
+	<!--<ion-content ng-show="model[0].isSelect" class="has-subheader padding" overflow-scroll="true">-->
+	<ion-content class="zp-contacts has-subheader"   on-swipe-left="onSwipeLeft()"   ng-repeat="model in models" ng-show="model.isSelect">
+		<ion-refresher pulling-text="下拉刷新..." pulling-icon="icon-down" refreshing-text="刷新中" refreshing-icon="icon-refresh" on-refresh="model.doRefresh()">
+		</ion-refresher>
+		<ion-list>
+			<ion-item class="item item-avatar" ng-repeat="contact in model.data">
+				<img ng-src="{{contact.pic}}" ui-sref="contact-detail">
+				<button  ui-sref="contact-detail">
+				<h2 ng-bind="contact.name">
+				</h2>
+				 <p>男</p>
+				 </button>
+				<bill-progress conf="contact"></bill-progress>
+			</ion-item>
+		</ion-list>
+			<ion-infinite-scroll ng-if="!model.moredata&&model.isSelect" icon="icon-refresh" immediate-check="false" on-infinite="model.loadMore();"  distance="1%"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

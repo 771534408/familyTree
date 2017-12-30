@@ -1,0 +1,117 @@
+<ion-view title="族谱小应用">
+	<ion-content>
+		<div class="list">
+			<label class="item item-input">
+        所在镇或乡：
+        <input type="text"  class="input-select" ng-model="hjSelect_x.result" readonly="readonly" placeholder="请选择所在的乡或者镇" conf="hjSelect_x" changeAge:   modal-select>
+        <i class="icon-next"></i>
+      </label>
+
+			<label class="item item-input">
+        所在小村庄：
+        <input type="text"  class="input-select" ng-model="hjSelect_c.result" readonly="readonly" placeholder="请选择所在的村庄" conf="hjSelect_c"  modal-select>
+        <i class="icon-next"></i>
+      </label>
+			<label class="item item-input">
+        所在村下的小队：
+        <input type="text"  class="input-select" ng-model="hjSelect_d.result" readonly="readonly" placeholder="请选择所在的村庄下的小队" conf="hjSelect_d"  modal-select>
+        <i class="icon-next"></i>
+      </label>
+			<div class="item  zp-avatar no-padding no-border" ng-click="upload()">
+				<span ng-if="!avatar">点击上传头像</span>
+				<img ng-src="{{avatar?avatar:'img/null.png'}}">
+			</div>
+			<div class="item item-input row no-padding">
+				<label class="item-input  col-33">
+				姓氏：
+				<input type="text" class="input-select "  ng-model="hjSelect_xs.result" readonly="readonly" placeholder="请选择姓氏" conf="hjSelect_xs" modal-letter-select>
+				<i class="icon-next"></i>
+				</label>
+
+				<label class="item-input  col-33">
+				名字：
+				<input type="text" class="input-select "  placeholder="输入名字"  >
+				</label>
+
+				<label class="item-input  col-33">
+				籍贯：
+				<input type="text" class="input-select "  placeholder="输入籍贯"  >
+				</label>
+			</div>
+			<div class="item item-input row no-padding">
+				<div class="item-input  col-45">
+					性别:
+					<ion-toggle ng-true-value="'男'" ng-false-value="'女'" ng-checked="sex.checked" ng-click="changeSex()">
+						{{sex.text}}
+					</ion-toggle>
+				</div>
+				<div class="item-input  col-30">
+					字辈:
+					<input type="text" class="input-select " placeholder="字辈">
+				</div>
+				<div class="item-input  col-25">
+					排行:
+					<input type="text" class="input-select " placeholder="排行">
+				</div>
+			</div>
+
+			<div class="item item-input row no-padding">
+				<div class="item-input  col-45">
+					婚姻:
+					<ion-toggle ng-true-value="'未婚'" ng-false-value="'已婚'" ng-checked="marriages.checked" ng-click="changeMarriages()">
+						{{marriages.text}}
+					</ion-toggle>
+				</div>
+
+				<label class="item-input  col-30">
+				学历：
+				<input type="text" class="input-select "  ng-model="hjSelect_xl.result" readonly="readonly" placeholder="选择学历" conf="hjSelect_xl" modal-some-select>
+				<i class="icon-next"></i>
+				</label>
+				<label class="item-input  col-25">
+				职务：
+				<input type="text" class="input-select " placeholder="职务" >
+				</label>
+			</div>
+
+			<div class="item item-input row no-padding">
+				<label class="item-input  col-50">
+				学校：
+				<input type="text" class="input-select " placeholder="学校" >
+				</label>
+				<label class="item-input  col-50">
+					生辰
+				<input type="text" class="input-select "  ng-model="hjSelect_sh.result" readonly="readonly" placeholder="选择生辰" conf="hjSelect_sh" modal-some-select>
+				<i class="icon-next"></i>
+				</label>
+			</div>
+
+			<div class="item item-input row no-padding">
+				<div class="item-input  col-45">
+					在世:
+					<ion-toggle ng-true-value="'是'" ng-false-value="'否'" ng-checked="alives.checked" ng-click="changeAlives()">
+						{{alives.text}}
+					</ion-toggle>
+				</div>
+
+			</div>
+		</div>
+
+		</div>
+		</div>
+	</ion-content>
+	<div class="bar bar-footer no-padding">
+		<div class="row no-padding">
+			<div class="col no-padding">
+				<button class="button button-full button-light reset">
+          收录
+        </button>
+			</div>
+			<div class="col no-padding">
+				<button class="button button-full button-positive sure" ui-sref="website">
+          进入主页面
+        </button>
+			</div>
+		</div>
+	</div>
+</ion-view>

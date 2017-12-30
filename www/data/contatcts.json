@@ -1,0 +1,32 @@
+{
+	"contacts": [
+		{
+			"id": 8,
+			"name": "魏金波",
+			"pic": "img/null.png",
+			"sex":0,
+			"phone": "13805736877"
+		},
+		{
+			"id": 8,
+			"name": "张三",
+			"pic": "img/null.png",
+			"sex":0,
+			"phone": "13805736877"
+		},
+		{
+			"id": 8,
+			"name": "李四",
+			"sex":1,
+			"pic": "img/null.png",
+			"phone": "13805736877"
+		},
+		{
+			"id": 8,
+			"name": "王五",
+			"sex":0,
+			"pic": "img/null.png",
+			"phone": "13805736877"
+		}
+	]
+}

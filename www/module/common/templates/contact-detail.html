@@ -1,0 +1,50 @@
+<ion-view title="{{title}}">
+	<ion-content class="zp-contacts">
+		<div class="list card">
+			<div class="item item-avatar">
+				<img src="img/null.png">
+				<h2>魏金波</h2>
+				<p>9月10号</p>
+			</div>
+			<div class="item item-body">
+				<div class="list">
+					<label class="item item-input">
+        现居地址：
+        <input type="text"  class="input-select" value="彭泽县太平乡康庄村黄家湾"  readonly="readonly" >
+      </label>
+					<label class="item item-input">
+        性别：
+        <input type="text"  class="input-select" value="男"  readonly="readonly" >
+      </label>
+					<label class="item item-input">
+        简介：
+     <textarea readonly="readonly">本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通
+     </textarea>
+      </label>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+	<ion-footer-bar>
+		<div class="row row-center">
+			<a class="col" ng-click="sendMail(user.email)">
+					<div>
+						<i class="icon-mail"></i>
+					</div>
+				<div>写邮件</div>
+			</a>
+			<a class="col">
+				<div ng-click="send(user.mobile);">
+					<i class="icon-message"></i>
+				</div>
+				<div>发短信</div>
+			</a>
+			<a class="col">
+				<div ng-click="call(user.mobile)">
+					<i class="icon-phone color-6 font-45"></i>
+				</div>
+				<div>呼叫</div>
+			</a>
+		</div>
+	</ion-footer-bar>
+</ion-view>

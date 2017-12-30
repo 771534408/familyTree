@@ -1,0 +1,481 @@
+/**定义系统默认的变量方便统一修改**/
+/*定义系统默认的字体颜色*/
+/*洋红色*/
+/*边界线*/
+/*icon统一字体大小*/
+/**内容区域的默认颜色**/
+/**头部右侧搜索按钮文字大小**/
+/***************定义列表默认的变量********************/
+/*定义列表的外边距*/
+/*定义列表默认字体大小*/
+/*列表每一项的边界线线颜色*/
+/*定义列表行间距*/
+/************************************************slide-box***********************************/
+/**tab高度**/
+/**
+     *ionic样式重置
+     */
+.pane,
+.view {
+  background: #f8f8f8;
+}
+/*单独为主页面使用*/
+.bar-main {
+  background-color: #338dc1;
+  color: #FFFFFF;
+}
+.bar .button.button-clear .icon:before,
+.bar .button.button-clear.icon-left:before,
+.bar .button.button-clear.icon-right:before,
+.bar .button.button-clear.icon:before,
+.bar button.button-clear .icon:before,
+.bar button.button-clear.icon-left:before,
+.bar button.button-clear.icon-right:before,
+.bar button.button-clear.icon:before {
+  font-size: initial;
+  line-height: auto !important;
+}
+/*对下拉刷新属性进行设置*/
+.scroll-refresher .ionic-refresher-content {
+  display: flex;
+  justify-content: center;
+}
+.scroll-refresher .icon-refreshing,
+.scroll-refresher .icon-pulling,
+ion-infinite-scroll .icon {
+  width: auto;
+  color: #338dc1;
+}
+.scroll-refresher .ionic-refresher-content .text-refreshing,
+.scroll-refresher .ionic-refresher-content .text-pulling {
+  line-height: 30px;
+  padding-left: 5px;
+  color: #338dc1;
+}
+/*珊格化布局新增*/
+.col-70 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 70%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 70%;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+.col-60 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 60%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+.col-45 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 45%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 45%;
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+.col-40 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 40%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 40%;
+  -ms-flex: 0 0 40%;
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+.col-38 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 38%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 38%;
+  -ms-flex: 0 0 38%;
+  flex: 0 0 38%;
+  max-width: 38%;
+}
+.col-30 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+.col-offset-16 {
+  margin-left: 16%;
+}
+.col-offset-16l {
+  margin-left: 16%;
+}
+.col-offset-16r {
+  margin-right: 16%;
+}
+/*modal右部滑入*/
+.slide-in-right {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(100%);
+}
+.slide-in-right.ng-enter,
+.slide-in-right > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+.slide-in-right.ng-enter-active,
+.slide-in-right > .ng-enter-active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide-in-right.ng-leave,
+.slide-in-right > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+}
+/*modal搜索界面UI修改*/
+.hj-modal .row {
+  height: 1rem;
+  line-height: 1rem;
+  color: #333333;
+  padding: 0;
+  padding-right: 0.48rem;
+  margin-left: 0.24rem;
+  border-bottom: 1px solid #c8c8c8;
+}
+.hj-modal .row .col {
+  height: 0.98rem;
+  line-height: 0.98rem;
+  padding: 0;
+}
+.hj-modal .row .col.col-90 {
+  text-align: left;
+  font-size: 0.28rem;
+}
+.hj-modal .row .col.col-10 {
+  text-align: right;
+}
+.hj-modal .row .icon-choose-yes,
+.hj-modal .row .icon-choose-no {
+  font-size: 0.4rem;
+}
+.hj-modal .letter {
+  height: auto;
+  line-height: auto;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.hj-modal .letter .key {
+  font-weight: bold;
+  font-size: 0.30rem;
+  text-align: center;
+}
+.hj-modal .letter .key:active {
+  background-color: #007AFF;
+}
+.hj-modal .letter .col-90 {
+  line-height: 0.50rem;
+}
+.hj-modal .letter p {
+  display: inline-flex;
+  padding: 0.10rem;
+  height: 0.60rem;
+  line-height: 0.60rem;
+  margin: 0;
+}
+.no-border-top {
+  border-top: 0;
+}
+.no-border-bottom {
+  border-bottom: 0;
+}
+.no-border {
+  border: 0;
+}
+/*搜索按钮样式重置*/
+button.search {
+  font-size: 0.17rem !important;
+  border: none;
+}
+.bar-positive .button.activated,
+.bar-positive .button.active {
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+/*******去掉点击的边框***********/
+.button.activated {
+  border: none !important;
+}
+/*统一字体图标大小*/
+.icon-next {
+  padding-right: 0.1rem;
+}
+/**去掉padding**/
+.no-padding {
+  padding: 0;
+}
+/***慧聚srm列表公共部分样式处理***/
+.bar-footer .row button {
+  line-height: 44px;
+  height: 44px;
+  font-size: 0.32rem;
+  margin: 0;
+}
+/*时间或者项选择器*/
+.input-select {
+  padding-right: 5px !important;
+  text-align: right;
+  cursor: pointer;
+  padding-right: 0;
+}
+input.input-select[readonly] {
+  background-color: rgba(0, 0, 0, 0);
+}
+.item-toggle {
+  border: 0;
+}
+.zp-avatar {
+  text-align: center;
+}
+.zp-avatar span {
+  position: absolute;
+  display: inline-block;
+  font-size: 0.2rem;
+  width: 2rem;
+  padding-top: 0.2rem;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.zp-avatar img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.zp-home .bannel {
+  height: 4rem;
+  overflow: hidden;
+}
+.zp-home .menu .col-25 p {
+  display: flex;
+  flex-direction: row;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.8rem;
+  background-color: #007AFF;
+}
+.zp-home .menu .col-25 p a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.zp-home .menu .col-25 p.menu_1 {
+  background-color: #33c3ac;
+}
+.zp-home .menu .col-25 p.menu_2 {
+  background-color: #fd9242;
+}
+.zp-home .menu .col-25 p.menu_3 {
+  background-color: #33b9c2;
+}
+.zp-home .menu .col-25 p.menu_4 {
+  background-color: #f75d8f;
+}
+.zp-home .menu .col-25 p.menu_5 {
+  background-color: #339ec2;
+}
+/*族谱亲系图*/
+.zp-stemma .zp-line {
+  background-color: #FFFFFF;
+  position: relative;
+  height: 0.6rem;
+}
+.zp-stemma .zp-line .line {
+  position: absolute;
+  top: 0;
+  height: 0.7rem;
+  width: 2px;
+  margin: 0 auto;
+  left: 50%;
+  margin-left: -1px;
+  background-color: #e5e5e5;
+}
+.zp-stemma .zp-line .line:before {
+  display: block;
+  content: ' ';
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin-left: -2px;
+  background-color: red;
+}
+.zp-stemma .zp-line p {
+  line-height: 0.6rem;
+  text-align: center;
+}
+.zp-stemma .song .line:before {
+  position: absolute;
+  bottom: 2px;
+}
+.zp-stemma .row {
+  background-color: #e5e5e5;
+  align-items: center;
+}
+.zp-stemma .row p {
+  position: relative;
+  width: 1.8rem;
+  height: 2rem;
+  background-image: url(../img/null.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.zp-stemma .row p span {
+  position: absolute;
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  background: #000000;
+  opacity: 0.9;
+  color: #FFFFFF;
+  font-weight: bold;
+  bottom: 0rem;
+}
+.zp-stemma .row .col-33 .row .col-50 p {
+  width: 1rem;
+  height: 1rem;
+}
+.zp-stemma .row .col-33 .row .col-50 p span {
+  line-height: 0.3rem;
+  height: 0.3rem;
+  font-size: 0.14rem;
+}
+.zp-stemma .own {
+  background-color: #FFFFFF;
+}
+.zp-stemma .own p {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.zp-stemma .own .left {
+  position: relative;
+}
+.zp-stemma .own .left P:before {
+  position: absolute;
+  top: 50%;
+  content: ' ';
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  right: -3px;
+  margin-top: -2px;
+  background-color: red;
+}
+.zp-stemma .own .right {
+  position: relative;
+}
+.zp-stemma .own .right .row:before {
+  position: absolute;
+  top: 50%;
+  content: ' ';
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  left: -3px;
+  margin-top: -2px;
+  background-color: red;
+}
+.zp-stemma .own .select {
+  position: relative;
+}
+.zp-stemma .own .select p {
+  border: 1px solid #00aa66;
+}
+.zp-stemma .own .select p span {
+  background-color: #00aa66;
+}
+.zp-stemma .own .select p:before,
+.zp-stemma .own .select p:after {
+  position: absolute;
+  top: 50%;
+  content: ' ';
+  left: -50%;
+  width: 50%;
+  height: 2px;
+  background-color: #e5e5e5;
+}
+.zp-stemma .own .select p:after {
+  left: 0;
+  margin-left: 100%;
+}
+.zp-stemma .own .select .line {
+  width: 0.3rem;
+  position: absolute;
+  font-size: 0.2rem;
+  top: 50%;
+  margin-top: -0.4rem;
+}
+.zp-stemma .own .select .left-line {
+  left: -0.2rem;
+}
+.zp-stemma .own .select .right-line {
+  top: 28%;
+  right: 0rem;
+}
+.navShadowLeft-sj {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 10px;
+  height: 44px;
+  background: #fff;
+  box-shadow: 7px 3px 15px #fff;
+}
+.navShadowRight-sj {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 10px;
+  height: 44px;
+  background: #fff;
+  box-shadow: -7px 3px 15px #ffffff;
+}
+.zp-contacts .right {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #8c8c8c;
+  font-size: 13px;
+}
+.zp-contacts .right button {
+  font-size: 0.4rem;
+  font-weight: bold;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 0.5rem;
+}
+.zp-contacts .item button {
+  padding-left: 0;
+  border-color: transparent;
+  background-color: #fff;
+}
+.zp-contacts .item-body input {
+  text-align: left;
+}
+ion-footer-bar .row-center {
+  text-align: center;
+}
+ion-footer-bar a {
+  color: #000000;
+}
+ion-footer-bar a i {
+  font-size: 0.40rem;
+}

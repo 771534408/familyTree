@@ -1,0 +1,21 @@
+<ion-view title="搜索结果页面">
+	<ion-content class="zp-contacts">
+		<ion-refresher pulling-text="下拉刷新..." pulling-icon="icon-down" refreshing-text="刷新中" refreshing-icon="icon-refresh" on-refresh="model.doRefresh()">
+		</ion-refresher>
+		<ion-list>
+			<ion-item class="item item-avatar" ng-repeat="contact in model.data">
+				<img ng-src="{{contact.pic}}">
+				<h2 ng-bind="contact.name">
+				</h2>
+				 <p>男</p>
+				
+				<span class="right">
+					<button class="button button-light icon-remind" ></button>
+					<button class="button button-light  icon-message" ></button>
+					<button class="button button-light  icon-phone" ></button>
+					<button class="button button-light  icon-mail" ></button>
+				</span>
+			</ion-item>
+		<ion-infinite-scroll ng-if="!model.moredata" icon="icon-refresh" immediate-check="false" on-infinite="model.loadMore()" distance="1%"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>
