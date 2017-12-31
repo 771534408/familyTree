@@ -3,18 +3,27 @@
 
 ###族谱APP
 #####简介
+
   现在的年轻人对于家族的概念越来越淡薄,然而族谱app的诞生让人们能够很好的查看、咨询自己的家族史，让年轻人加深对自己家族的概念。趁项目空档期有部分时间可以前期实现一个小小的族谱app，项目的整个架构基于ionic框架的基础之上进行开发。
+  
 #####效果图
+
 ![pic_1.gif](http://upload-images.jianshu.io/upload_images/7086971-52f906de87ae381f.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ####实现过程
 1.族谱app功能包含（成员的录入，族谱的介绍，家谱亲系图，族谱联系人，电子墓园）等五大部分构成，项目基于当前最流行的ionic框架进行开发，使用的技术点如下：
+
 1.利用sass对css进行预编译，方便样式的管理及维护.
+
 2.懒加载
+
 懒加载问题，我看到ionic有组件支持，但是不是很完善，可以使用下面的库
+
 [点击打开](https://github.com/tjoskar/ng-lazyload-image)
+
 3.请求网络
+
 ```js
 /**
  * @desc 公司信息化app接口调用的所有请求入口 
@@ -106,6 +115,7 @@ app.factory('appService', ['$resource', '$cacheFactory', function($resource, $ca
 	}]);
 ```
 4.全局常量处理
+
 ```js
  /**
   * @desc 族谱app常量设置，及api接口
